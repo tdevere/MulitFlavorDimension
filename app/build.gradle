@@ -23,43 +23,17 @@ android {
         }
     }
 
-    def InAppCenter = System.getenv('InAppCenter')
-    def productDimension
-
-    if (InAppCenter == "1"){
-        productDimension =  System.getenv('productDimension')
-    }
-    else{
-        productDimension = "free" // whatever you want locally
-    }
-
-    println(InAppCenter)
-    println(productDimension)
-
     flavorDimensions "free", "paid"
 
     productFlavors {
-        //set 1
         product1{
             dimension "free"
-//            if (InAppCenter == "1"){
-//                dimension productDimension
-//            }
-//            else{dimension "deafult"}
         }
         product2{
             dimension "free"
-//            if (InAppCenter == "1"){
-//                dimension productDimension
-//            }
-//            else{dimension "deafult"}
         }
         product3{
             dimension "paid"
-//            if (InAppCenter == "1"){
-//                dimension productDimension
-//            }
-//            else{dimension "deafult"}
         }
     }
 
