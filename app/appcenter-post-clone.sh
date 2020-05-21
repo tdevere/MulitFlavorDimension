@@ -1,20 +1,12 @@
 #!/usr/bin/env bash
-InAppCenter=$InAppCenter
-buildVariant=$buildVariant
 
-find ./ -name gradlew
-ls
-printenv
+echo $APPCENTER_ANDROID_VARIANT
 
-if [ -e "InAppCenter" ]
+if [ $InAppCenter == "1" ]
 then
   echo "InAppCenter"
-  if [ -e "buildVariant" ]
-  then
-    echo "buildVariant"
-    gradlew_file= find ./ -name gradlew
-    echo "gradlew_file"
-    sed -i "s/$args0/$buildVariant" gradlew_file
-  fi
+  $APPCENTER_ANDROID_VARIANT=$product1Release
 fi
+
+printenv
 
