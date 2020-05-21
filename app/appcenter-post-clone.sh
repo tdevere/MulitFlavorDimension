@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
-
-if [ -e "$InAppCenter" ]
+InAppCenter=$InAppCenter
+buildVariant=$buildVariant
+echo InAppCenter
+echo buildVariant
+if [ -e "InAppCenter" ]
 then
-  echo "$InAppCenter"
-  if [ -e "$buildVariant" ]
+  echo "InAppCenter"
+  if [ -e "buildVariant" ]
   then
-    echo "$buildVariant"
+    echo "buildVariant"
     ls
     gradlew_file= find ./ -name gradlew
     echo "gradlew_file"
@@ -14,4 +17,3 @@ then
   fi
 fi
 
-cat gradlew_file
