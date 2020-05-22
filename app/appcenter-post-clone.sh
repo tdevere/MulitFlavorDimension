@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-cd $APPCENTER_SOURCE_DIRECTORY
+cd $BUILD_SOURCESDIRECTORY
 ls
-echo "read gradlew"
-#cat gradlew
+cat gradlew
 
 echo "(((((((((((((((((((((((((((((((((((updating gradlew)))))))))))))))))))))))))))))))))))"
 
