@@ -16,7 +16,7 @@ then
   #cat gradlew
 
   export APPCENTER_ANDROID_VARIANT=$buildVariant
-  exporet BUILDVARIANT=$buildVariant
+  export BUILDVARIANT=$buildVariant
   export MOBILECENTER_ANDROID_VARIANT=$buildVariant
   echo $APPCENTER_ANDROID_VARIANT
   echo $BUILDVARIANT
