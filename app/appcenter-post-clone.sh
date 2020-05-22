@@ -7,18 +7,18 @@ echo $buildVariant
 APPCENTER_ANDROID_VARIANT=$APPCENTER_ANDROID_VARIANT
 buildVariantUpdate=$product1Release
 
-echo APPCENTER_ANDROID_VARIANT
-echo InAppCenter
-echo $buildVariantUpdate
 
-set APPCENTER_ANDROID_VARIANT $buildVariantUpdate
-
-echo buildVariant
 if [ $InAppCenter == "1" ]
 then
   echo "InAppCenter"
-  set APPCENTER_ANDROID_VARIANT buildVariant
+  if [ -e "buildVariant" ]
+  then
+    echo "buildVariant"
+    find ./ -name gradlew -exec sed -i "s/$args0/$buildVariant" gradlew_file
+  fi
 fi
 
-printenv
+find ./ -name gradlew -exec cat {} +
+
+
 
