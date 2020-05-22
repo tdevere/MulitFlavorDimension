@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+
+cd $APPCENTER_SOURCE_DIRECTORY
+ls
 echo "read gradlew"
+
 cat gradlew
 
 if [ $InAppCenter == "1" ]
