@@ -11,11 +11,7 @@ if [ $InAppCenter == "1" ]
 then
   echo "(((((((((((((((((((((((((((((((((((InAppCenter)))))))))))))))))))))))))))))))))))"
   echo "(((((((((((((((((((((((((((((((((((updating gradlew)))))))))))))))))))))))))))))))))))"
-
-
-
-  sed -i "s/\$args0/$buildVariant" gradlew
-
+  sed -i 's/$args[0]/"'$buildVariant'"/' gradlew
   echo "(((((((((((((((((((((((((((((((((((updated gradlew - read gradlew)))))))))))))))))))))))))))))))))))"
   cat gradlew
 fi
